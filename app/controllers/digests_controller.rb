@@ -4,8 +4,8 @@ class DigestsController < ApplicationController
 	def create
     render nothing: true, status: 200
 
-    account_sid = ENV[AccSID],
-    auth_token = ENV[AuthToken]
+    account_sid = ENV['AccSID'],
+    auth_token = ENV['AuthToken']
 
 
 
