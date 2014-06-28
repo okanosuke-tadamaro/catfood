@@ -2,6 +2,7 @@ class DigestsController < ApplicationController
   skip_before_filter :verify_authenticity_token, only: [:create]
 
 	def create
+    #client = Jawbone::Client.new "your_token"
     render nothing: true, status: 200
 
     account_sid = ENV['AccSID'],

@@ -28,6 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    awesome_print (1.2.0)
     bcrypt (3.1.7)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -61,7 +62,12 @@ GEM
       multipart-post (>= 1.2, < 3)
     hashie (2.1.2)
     hike (1.2.3)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
+    jawbone (0.4)
+      httparty (~> 0.11.0)
     jbuilder (2.1.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -171,11 +177,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)
   devise
   dotenv-rails
+  jawbone
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-jawbone

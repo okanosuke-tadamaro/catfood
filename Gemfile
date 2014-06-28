@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails'
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'rails', '4.1.0'
 gem 'pg'
@@ -14,13 +14,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'omniauth-jawbone'
 gem 'rest-client'
+gem 'jawbone'
 
 group :development do
   gem 'spring'
   gem 'pry'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'dotenv-rails'
+  gem 'awesome_print'
 end
 
 group :production do
