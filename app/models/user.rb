@@ -6,19 +6,7 @@ class User < ActiveRecord::Base
   has_many :meals
   has_many :suggestions
 
-  def max_calories
-  end
-
-  def max_carbs
-  end
-
-  def max_fats
-  end
-
-  def max_proteins
-  end
-
-  def calculate_bmr(weight, height, age)
+  def max_calories(weight, height, age)
     if self.gender == 'male'
       genderOffset = 5
     elsif self.gender == 'female'
@@ -30,7 +18,16 @@ class User < ActiveRecord::Base
     activity = 1.375
     bmr = 10 * weight + 6.25 * height - 5 * age + genderOffset
 
-    bmr * activity
+    total_daily_calories  bmr * activity
+  end
+
+  def max_carbs
+  end
+
+  def max_fats
+  end
+
+  def max_proteins
   end
 
 end
