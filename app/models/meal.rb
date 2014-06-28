@@ -6,6 +6,7 @@ class Meal < ActiveRecord::Base
 
   def create_associated_suggestion
     create_suggestion(
+      user_id: user.id,
       to_be_eaten_at: Time.now + 4.hours,
       message: suggested_message,
       calories: suggested_calories,

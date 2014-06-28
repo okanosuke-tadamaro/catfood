@@ -14,18 +14,18 @@ class User < ActiveRecord::Base
     end
     bmr = 10 * weight + 6.25 * (height * 100) - 5 * age + gender_offset
 
-    bmr * 1.555
+    bmr * 1.4
   end
 
   def daily_carbs
-    (250 * daily_calories)/2000
+    (250 * daily_calories) / 2000
   end
 
   def daily_fats
-    (61 * daily_calories)/2000
+    (61 * daily_calories) / 2000
   end
 
   def daily_proteins
-    (87.5 * daily_calories)/2000
+    (87.5 * daily_calories) / 2000
   end
 end
