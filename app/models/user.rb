@@ -8,17 +8,13 @@ class User < ActiveRecord::Base
 
   def daily_calories
     if gender == 'male'
-      genderOffset = 5
+      gender_offset = 5
     elsif gender == 'female'
-      genderOffset = -161
+      gender_offset = -161
     end
-    #activity = {sedentary: 1500, light: 3000,
-    #            moderate: 5000, active: 10000,
-    #           extra: 20000}
-    activity = 1.375
-    bmr = 10 * weight + 6.25 * height - 5 * age + genderOffset
+    bmr = 10 * weight + 6.25 * (height * 100) - 5 * age + gender_offset
 
-    bmr * activity
+    bmr * 1.555
   end
 
   def daily_carbs
