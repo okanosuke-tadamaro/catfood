@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, omniauth_providers: [:jawbone]
 
-  has_many :meals
-  has_many :suggestions
+  has_many :meals, dependent: :destory
+  has_many :suggestions, dependent: :destroy
 
   def daily_calories
     if gender == 'male'
