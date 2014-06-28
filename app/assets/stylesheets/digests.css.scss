@@ -29,6 +29,7 @@ body {
 .devise-wrap {
 	width: 300px;
 	margin: 0 auto;
+	margin-bottom: 30px;
 	border: solid 1px #89C4F4;
 	border-radius: 5px;
 	.devise-header {
@@ -71,6 +72,7 @@ body {
 			font-size: 16px;
 			text-indent: 5px;
 			margin: 10px 0 15px 0;
+			-webkit-appearance: none;
 		}
 		input[type='submit'] {
 			background-color: #89C4F4;
