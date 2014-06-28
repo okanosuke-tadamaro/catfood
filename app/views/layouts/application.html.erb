@@ -3,6 +3,7 @@
 <head>
 	<title>Catfood</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
@@ -14,7 +15,9 @@
 		</div>
 	</div>
 
+	<div class="wrap">
 	<%= yield %>
+	</div>
 
 </body>
 </html>
