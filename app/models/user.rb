@@ -17,4 +17,20 @@ class User < ActiveRecord::Base
 
   def max_proteins
   end
+
+  def calculate_bmr(weight, height, age)
+    if self.gender == 'male'
+      genderOffset = 5
+    elsif self.gender == 'female'
+      genderOffset = -161
+    end
+    #activity = {sedentary: 1500, light: 3000,
+    #            moderate: 5000, active: 10000,
+    #           extra: 20000}
+    activity = 1.375
+    bmr = 10 * weight + 6.25 * height - 5 * age + genderOffset
+
+    bmr * activity
+  end
+
 end
