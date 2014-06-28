@@ -2,20 +2,18 @@ class DigestsController < ApplicationController
   skip_before_filter :verify_authenticity_token, only: [:create]
 
 	def create
-    user_for_meal.meals.create(
-      eaten_at: Time.now,
-      title: jawbone_meal_title,
-      note: jawbone_meal_note,
-      calories: jawbone_meal['calories'],
-      carbs: jawbone_meal['carbohydrate'],
-      fats: jawbone_meal['fat'],
-      proteins: jawbone_meal['protein']
-    )
+    if params['events'].first['action'] == 'creation'
+      user_for_meal.meals.create(
+        eaten_at: Time.now,
+        title: jawbone_meal_title,
+        note: jawbone_meal_note,
+        calories: jawbone_meal['calories'],
+        carbs: jawbone_meal['carbohydrate'],
+        fats: jawbone_meal['fat'],
+        proteins: jawbone_meal['protein']
+      )
+    end
     render nothing: true, status: 200
-
-
-
-
 
     #account_sid = ENV['AccSID']
     #auth_token = ENV['AuthToken']
