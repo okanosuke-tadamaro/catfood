@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, omniauth_providers: [:jawbone]
 
-  has_many :meals, dependent: :destory
+  has_many :meals, dependent: :destroy
   has_many :suggestions, dependent: :destroy
 
   def daily_calories
@@ -28,5 +28,4 @@ class User < ActiveRecord::Base
   def daily_proteins
     (87.5 * daily_calories)/2000
   end
-
 end
