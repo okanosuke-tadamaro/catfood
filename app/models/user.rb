@@ -18,16 +18,19 @@ class User < ActiveRecord::Base
     activity = 1.375
     bmr = 10 * weight + 6.25 * height - 5 * age + genderOffset
 
-    total_daily_calories = bmr * activity
+    @total_daily_calories = bmr * activity
   end
 
   def max_carbs
+    carbs = (250 * total_daily_calories)/2000
   end
 
   def max_fats
+    fats = (61 * total_daily_calories)/2000
   end
 
   def max_proteins
+    proteins = (87.5 * total_daily_calories)/2000
   end
 
 end
