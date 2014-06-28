@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails'
+
 gem 'rails', '4.1.0'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
@@ -8,11 +10,13 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
+
 gem 'devise'
+gem 'omniauth-jawbone'
+gem 'rest-client'
 
 group :development do
+  gem 'spring'
   gem 'pry'
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -21,4 +25,8 @@ end
 
 group :production do
   gem 'rails_12factor'
+end
+
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
 end
