@@ -13,7 +13,7 @@ class DigestsController < ApplicationController
 
     @client.account.messages.create({
                                         :from => '+15617392747',
-                                        :to => phone_num,
+                                        :to => phone_number,
                                         :body => "Hi #{first_name}, You should eat your next meal at #{time}. Try eating some #{rec}"
                                     })
   end
