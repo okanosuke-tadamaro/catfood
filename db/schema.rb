@@ -11,10 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140628163231) do
+ActiveRecord::Schema.define(version: 20140628221643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "meals", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "eaten_at"
+    t.string   "title"
+    t.text     "note"
+    t.integer  "calories"
+    t.integer  "carbs"
+    t.integer  "fats"
+    t.integer  "proteins"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suggestions", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "meal_id"
+    t.datetime "to_be_eaten_at"
+    t.text     "message"
+    t.integer  "calories"
+    t.integer  "carbs"
+    t.integer  "fats"
+    t.integer  "proteins"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                           default: "", null: false
@@ -34,6 +60,7 @@ ActiveRecord::Schema.define(version: 20140628163231) do
     t.float    "weight"
     t.float    "height"
     t.string   "gender"
+    t.integer  "age"
     t.integer  "phone_number"
     t.string   "jawbone_xid"
     t.string   "jawbone_access_token"

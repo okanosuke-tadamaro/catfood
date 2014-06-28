@@ -9,6 +9,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       last_name: jawbone_last_name,
       weight: jawbone_weight,
       height: jawbone_height,
+      age: jawbone_age,
       gender: jawbone_gender
     )
     if session[:jawbone_redirect_url]
@@ -46,6 +47,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def jawbone_height
     jawbone_client.user['data']['height']
+  end
+
+  def jawbone_age
+    jawbone_client.trends['data']['data'].last.last['age']
   end
 
   def jawbone_gender

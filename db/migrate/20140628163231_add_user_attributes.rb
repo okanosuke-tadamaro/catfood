@@ -5,6 +5,7 @@ class AddUserAttributes < ActiveRecord::Migration
     add_column :users, :weight, :float
     add_column :users, :height, :float
     add_column :users, :gender, :string
+    add_column :users, :age, :integer
     add_column :users, :phone_number, :integer
     add_column :users, :jawbone_xid, :string
     add_column :users, :jawbone_access_token, :string

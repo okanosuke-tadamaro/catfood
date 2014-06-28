@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  meal_id: 1
+  to_be_eaten_at: 2014-06-28 18:16:43
+  message: MyText
+  calories: 1
+  carbs: 1
+  fats: 1
+  proteins: 1
+
+two:
+  user_id: 1
+  meal_id: 1
+  to_be_eaten_at: 2014-06-28 18:16:43
+  message: MyText
+  calories: 1
+  carbs: 1
+  fats: 1
+  proteins: 1
