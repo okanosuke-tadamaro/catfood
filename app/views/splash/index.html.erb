@@ -4,7 +4,8 @@
 		<ul class="hero-menu">
 			<li><%= link_to 'Home', root_path %></li>
 			<li>About</li>
-			<li>Sign in / Sign up</li>
+			<li><%= link_to 'Sign in', new_user_session_path %></li>
+			<li><%= link_to 'Sign up', new_user_registration_path %></li>
 		</ul>
 		<%= image_tag('cat_default.png', :class => 'animated tada') %>
 	</div>
