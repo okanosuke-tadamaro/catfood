@@ -27,6 +27,7 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'thin'
 end
 
 group :doc do
