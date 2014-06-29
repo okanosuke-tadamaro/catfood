@@ -2,7 +2,7 @@ class DigestsController < ApplicationController
   skip_before_filter :verify_authenticity_token, only: [:create]
 
 	def create
-    if params['events'].first['action'] == 'creation' && params['events'].first['action'] == 'meal'
+    if params['events'].first['action'] == 'creation' && params['events'].first['type'] == 'meal'
       user_for_meal.meals.create(
         eaten_at: Time.now,
         title: jawbone_meal_title,
