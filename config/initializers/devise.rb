@@ -254,5 +254,5 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  config.omniauth :jawbone, ENV['JAWBONE_CLIENT_ID'], ENV['JAWBONE_CLIENT_SECRET'], scope: 'basic_read extended_read meal_read generic_event_write'
+  config.omniauth :jawbone, ENV['JAWBONE_CLIENT_ID'], ENV['JAWBONE_CLIENT_SECRET'], scope: 'basic_read extended_read meal_read generic_event_read generic_event_write'
 end
