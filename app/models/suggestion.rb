@@ -17,7 +17,7 @@ class Suggestion < ActiveRecord::Base
 
   def create_jawbone_custom_event
     jawbone_client.create_generic_event(
-      title: "You have #{calories} left today",
+      title: "You have #{calories} calories left today",
       note: message
     ) 
   end

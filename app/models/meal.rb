@@ -35,12 +35,14 @@ class Meal < ActiveRecord::Base
   end
 
   def suggested_message
-    "Thanks for eating #{title}!
-    
-    In order to maintain a healthy diet today, cat food recommends that you eat:
-    #{suggested_calories} more calories,
-    #{suggested_carbs}g of more carbs,
-    #{suggested_fats}g of more fats and
-    #{suggested_proteins}g of more protein"
+<<-EOS
+You just had #{title}
+
+In order to maintain a healthy diet today, catfood recommends that you eat:
+#{suggested_calories.round} more calories,
+#{suggested_carbs.round}g of more carbs,
+#{suggested_fats.round}g of more fats and
+#{suggested_proteins.round}g of more protein"
+EOS
   end
 end
