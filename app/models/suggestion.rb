@@ -18,7 +18,7 @@ class Suggestion < ActiveRecord::Base
   def create_jawbone_custom_event
     jawbone_client.create_generic_event(
       title: "You have #{calories} calories left today",
-      image_url: 'http://catfood.io/cat_happy.png',
+      image_url: 'http://i.imgur.com/s6CN7XY.png',
       note: message
     ) 
   end
