@@ -44,8 +44,8 @@ In order to maintain a healthy diet today, catfood recommends that you eat the f
 #{suggested_fats.round}g of more fats and
 #{suggested_proteins.round}g of more protein
 
-Your next meal should be around:
-#{(Time.now + 4.hours).strftime('%I:%M%p')}
+Based on your sleeping habits, your next meal should be around:
+#{(DateTime.now.in_time_zone('EST') + 4.hours).strftime('%l:%M%p')}
 EOS
   end
 end
