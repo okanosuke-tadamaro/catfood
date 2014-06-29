@@ -38,7 +38,7 @@ class Meal < ActiveRecord::Base
 <<-EOS
 You just had #{title}
 
-In order to maintain a healthy diet today, catfood recommends that you eat:
+In order to maintain a healthy diet today, catfood recommends that you eat the following in the next few meals:
 #{suggested_calories.round} more calories,
 #{suggested_carbs.round}g of more carbs,
 #{suggested_fats.round}g of more fats and
