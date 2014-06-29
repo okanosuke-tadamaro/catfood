@@ -43,6 +43,9 @@ In order to maintain a healthy diet today, catfood recommends that you eat the f
 #{suggested_carbs.round}g of more carbs,
 #{suggested_fats.round}g of more fats and
 #{suggested_proteins.round}g of more protein
+
+Your next meal should be around:
+#{(Time.now + 4.hours).strftime('%I:%M%p')}
 EOS
   end
 end
