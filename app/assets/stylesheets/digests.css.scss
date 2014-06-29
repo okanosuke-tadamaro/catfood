@@ -1,9 +1,18 @@
-html, body, h2, ul, li, label, input { margin: 0; padding: 0; }
+html, body, h1, h2, ul, li, label, input { margin: 0; padding: 0; }
 
 body {
   padding-top: 100px;
   font-family: 'Roboto';
   color: #333;
+}
+
+a {
+	color: #89C4F4;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #1F8FEA;
 }
 
 .header {
@@ -24,6 +33,29 @@ body {
 }
 
 .wrap {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.hero-block {
+	text-align: center;
+	.hero-menu {
+		list-style-type: none;
+		li {
+			text-transform: uppercase;
+			margin: 0 5px 0 5px;
+			display: inline-block;
+		}
+	}
+	img {
+		width: 300px;
+	}
+}
+
+.hero {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.2rem;
 }
 
 .devise-wrap {
