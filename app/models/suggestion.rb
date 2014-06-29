@@ -6,7 +6,7 @@ class Suggestion < ActiveRecord::Base
 
   def update_subscribers
     create_jawbone_custom_event
-    #create_twilio_message
+    create_twilio_message
   end
 
   private
@@ -23,9 +23,11 @@ class Suggestion < ActiveRecord::Base
   end
 
   def create_twilio_message
-    #account_sid = ENV['AccSID']
-    #auth_token = ENV['AuthToken']
-    #@client = Twilio::REST::Client.new account_sid, auth_token
-    #@client.account.messages.create({:from => '+15617392747', :to => phone_number, :body => "Hi #{first_name}, You should eat your next meal at #{time}. Try eating some #{rec}"})
+    client = Twilio::REST::Client.new(ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN'])
+    client.account.messages.create({
+      from: '+15617392747',
+      to: user.phone_number,
+      body: message
+    })
   end
 end

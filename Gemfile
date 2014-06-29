@@ -15,6 +15,7 @@ gem 'devise'
 gem 'omniauth-jawbone'
 gem 'rest-client'
 gem 'jawbone'
+gem 'twilio-ruby'
 
 group :development do
   gem 'spring'

@@ -42,7 +42,7 @@ In order to maintain a healthy diet today, catfood recommends that you eat:
 #{suggested_calories.round} more calories,
 #{suggested_carbs.round}g of more carbs,
 #{suggested_fats.round}g of more fats and
-#{suggested_proteins.round}g of more protein"
+#{suggested_proteins.round}g of more protein
 EOS
   end
 end

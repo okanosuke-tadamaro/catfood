@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20140628221643) do
     t.float    "height"
     t.string   "gender"
     t.integer  "age"
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.string   "jawbone_xid"
     t.string   "jawbone_access_token"
     t.datetime "jawbone_access_token_expires_at"
